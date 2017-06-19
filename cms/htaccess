@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /cms/
+
+RewriteCond %{REQUEST_FILENAME} !-d [NC]
+RewriteCond %{REQUEST_FILENAME} !-f [NC]
+RewriteRule ^(.*)$ index.php?pid=$1 [QSA,L]
